@@ -2,6 +2,7 @@ version: '3.6'
 services:
   recordings:
     build: mod/recordings
+    restart: unless-stopped
     depends_on:
       - redis
     environment:
